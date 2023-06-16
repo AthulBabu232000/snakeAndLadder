@@ -1,0 +1,47 @@
+.image-container{
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.image-wrapper{
+    height:80vh;
+    width:80vh;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+  
+ 
+}
+.image-container>.image-wrapper>img{
+    height:80vh;
+    width:80vh;
+    position:absolute;
+    opacity:0.5;    
+    display:none;   
+    
+}
+
+.image-container .image-wrapper .Noboxes{
+    /* height:50px;
+    width:50px; */
+    flex-basis:10%; 
+    aspect-ratio: 1/1;
+    border:1px solid #000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bolder;
+}
+
+.div-to-move1,.div-to-move2{
+    height:30px;
+    width:30px;
+    border-radius:50%;
+    background-color:#000;
+    position:absolute;
+}
+.div-to-move2{
+    background-color:aqua;
+}

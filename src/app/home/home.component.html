@@ -1,0 +1,15 @@
+<div class="image-container">
+    <div #innerDiv1 class="div-to-move1"></div>
+    <div #innerDiv2 class="div-to-move2"></div>
+    <button (click)="randomIntegerGenerator()"class="btn">enter</button>
+    <div #containerDiv class="image-wrapper">
+
+        <div #outerDiv *ngFor="let numbers of boardArray;let i=index" class="bg-warning Noboxes" id="box{{numbers}}">{{numbers}}
+          
+                
+
+         
+        </div>
+        <img src="../../assets/images/img1.png" alt="snakeandladderbackground" srcset="">
+    </div>
+</div>

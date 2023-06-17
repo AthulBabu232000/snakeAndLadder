@@ -6,15 +6,21 @@ import { Routes,RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { DiceComponent } from './dice/dice.component';
+import { HeaderComponent } from './header/header.component';
+import { WinnerComponent } from './winner/winner.component';
 const routes:Routes=[{
   path:'',
   component:HomeComponent
-},]
+},
+{path:'winner/:param',
+component:WinnerComponent}]
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    DiceComponent
+    DiceComponent,
+    HeaderComponent,
+    WinnerComponent
   ],
   imports: [
     BrowserModule,

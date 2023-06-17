@@ -3,6 +3,7 @@
     display:flex;
     justify-content: center;
     align-items:center;
+    position:relative;
 }
 .image-wrapper{
     height:80vh;
@@ -11,15 +12,17 @@
     flex-wrap:wrap;
     justify-content: center;
     align-items: center;
+position:relative;
   
  
 }
-.image-container>.image-wrapper>img{
-    height:80vh;
-    width:80vh;
+.image-container .image-wrapper img{
+    height:100%;
+    width:100%;
     position:absolute;
-    opacity:0.5;    
-    display:none;   
+    user-select:none;
+    /* opacity:0.5;     */
+    /* display:none;    */
     
 }
 
@@ -41,7 +44,9 @@
     border-radius:50%;
     background-color:#000;
     position:absolute;
+    z-index:100;
 }
+
 .div-to-move2{
     background-color:aqua;
 }

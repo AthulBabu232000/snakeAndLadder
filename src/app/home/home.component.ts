@@ -1,5 +1,5 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-
+import { ChangeDetectorRef, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { DiceComponent } from '../dice/dice.component';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -10,7 +10,9 @@ export class HomeComponent implements OnInit {
 @ViewChild('outerDiv',{static:false}) outerDiv!:ElementRef
 @ViewChild('innerDiv1',{static:false}) innerDiv1!:ElementRef//player1
 @ViewChild('innerDiv2',{static:false}) innerDiv2!:ElementRef//player2
-  constructor() { }
+
+
+  constructor(private changeDetector:ChangeDetectorRef) { }
   boardArray:number[]=[]//nxt 3 used to generate no.div in that order.
   temp:number[]=[];
   counter:number=0;
@@ -63,6 +65,7 @@ export class HomeComponent implements OnInit {
   randomIntegerGenerator(){
     this.randomInteger=Math.floor(Math.random()*6)+1;
     console.log(this.randomInteger);
+    this.changeDetector.detectChanges();//using changedetector ref in parent comp home>>>dice
     this.playerSelector();
   }
 

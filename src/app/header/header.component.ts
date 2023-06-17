@@ -12,11 +12,11 @@ export class HeaderComponent implements OnChanges {
   constructor() { }
 
   ngOnChanges(changes:SimpleChanges){
-    if(this.playerFlag==1){
+    if(this.playerFlag==2){
     this.player1.nativeElement.style.color='green';
     this.player2.nativeElement.style.color='red';
 
-    }else if(this.playerFlag==2){
+    }else if(this.playerFlag==1){
       this.player2.nativeElement.style.color='green'
       this.player1.nativeElement.style.color='red';
     }

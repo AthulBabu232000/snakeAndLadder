@@ -26,38 +26,14 @@ border-radius:50%;
 }
 
   
+@media screen and (max-width:600px){
+  .dice{
+    top:10%;
+    transform:translateX(-10%) translateY(-50%);
+  }
+}
 
   
-  .dice .face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    border: 1px solid black;
-    backface-visibility: hidden;
-  }
-  
-  .dice .front {
-    transform: translateZ(50px);
-  }
-  
-  .dice .back {
-    transform: rotateY(180deg) translateZ(50px);
-  }
-  
-  .dice .top {
-    transform: rotateX(-90deg) translateZ(50px);
-  }
-  
-  .dice .bottom {
-    transform: rotateX(90deg) translateZ(50px);
-  }
-  
-  .dice .left {
-    transform: rotateY(-90deg) translateZ(50px);
-  }
-  
-  .dice .right {
-    transform: rotateY(90deg) translateZ(50px);
-  }
+
+ 
   

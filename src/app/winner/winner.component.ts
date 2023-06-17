@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router, Routes } from '@angular/router';
 
 @Component({
   selector: 'app-winner',
@@ -8,8 +8,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class WinnerComponent implements OnInit {
 
-  constructor(private activatedRoute:ActivatedRoute) { }
+  constructor(private activatedRoute:ActivatedRoute,private routes:Router) { }
 winner:any;
+goBack(){
+this.routes.navigate(['/']);
+}
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe(params=>{
       this.winner=params.get('param');

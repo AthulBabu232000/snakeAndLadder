@@ -162,7 +162,7 @@ export class HomeComponent implements OnInit {
       toDiv.appendChild(this.innerDiv1.nativeElement);
     }
   }
-  diceAnimator() {}
+ 
   randomIntegerGenerator() {
     this.randomInteger = Math.floor(Math.random() * 6) + 1;
     console.log(this.randomInteger);

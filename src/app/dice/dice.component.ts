@@ -1,4 +1,5 @@
-import { Component, Input, OnChanges, OnInit, Output, SimpleChanges,EventEmitter } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, Output, SimpleChanges,EventEmitter, ViewChild, ElementRef } from '@angular/core';
+import { setInterval } from 'timers';
 
 
 @Component({
@@ -10,6 +11,7 @@ export class DiceComponent implements OnChanges {
 
   @Input() passRandomNumber!:number;
 @Input() initialText!:string;
+@ViewChild('dice',{static:false}) dice!:ElementRef;
   
   dotCount:number=0;// randomInteger from parent home>>@input in child
   dotArray:number[]=[];
@@ -21,8 +23,15 @@ export class DiceComponent implements OnChanges {
     }
     if(this.dotArray.length>0){
     this.initialText='';
-
+ this.diceAnimator();
     }
+
+  }
+  diceAnimator(){
+    this.dice.nativeElement.classList.add('diceAnimationClass');
+    setTimeout(() => {
+      this.dice.nativeElement.classList.remove('diceAnimationClass');
+    }, 150);
 
   }
 
@@ -32,7 +41,6 @@ export class DiceComponent implements OnChanges {
     if(changes['passRandomNumber']){
 
       this.dotCount=this.passRandomNumber;
-      
       this.dotArray=[];
       this.arrayMaker();
     }

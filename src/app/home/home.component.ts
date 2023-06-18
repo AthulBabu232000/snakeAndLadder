@@ -26,8 +26,8 @@ export class HomeComponent implements OnInit {
   temp: number[] = [];
   counter: number = 0;
   randomInteger: number = 0; //random number between 1 and 6 including both
-  player1: number = 0;
-  player2: number = 0;
+  player1: number = 0;//current position of player1
+  player2: number = 0;//current position of player2
   playerCounter: number = 0; //choses player1 or player2
   toDivId: number = 0; //to which div should the coin move
   firstTry1: boolean = false;

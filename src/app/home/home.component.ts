@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit {
   //diceComp click=>randomIntegerGenerator=>playerSelector=>playersValueSetter=>handleInputValue; function flow
   playerSelector() {
     this.randomInteger == 6
-      ? this.playerCounter == this.playerCounter
+      ? this.playerCounter = this.playerCounter
       : this.playerCounter++;
     this.randomInteger == 1 && this.playerCounter % 2 == 1
       ? (this.firstTry1 = true)
